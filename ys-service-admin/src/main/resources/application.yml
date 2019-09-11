@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ys-service-admin
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+
+server:
+  port: 6060
+
+hosts:
+  sso: http://localhost:8080

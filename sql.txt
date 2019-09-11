@@ -1,0 +1,27 @@
+ ======SQL建表语句============== 
+CREATE TABLE `hp_user` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL COMMENT '花名',
+  `realname` varchar(50) NOT NULL COMMENT '姓名',
+  `mobile_no` varchar(11) NOT NULL COMMENT '手机号',
+  `gender` tinyint(1) NOT NULL DEFAULT '2' COMMENT '0男 1女 2未知',
+  `password` varchar(50) NOT NULL COMMENT '密码',
+  `headimg` varchar(300) DEFAULT NULL COMMENT '头像',
+  `id_card` varchar(18) NOT NULL COMMENT '身份证',
+  `salt` varchar(15) NOT NULL COMMENT '盐值',
+  `referer_code` varchar(10) DEFAULT NULL COMMENT '推广码',
+  `referer_url` varchar(500) DEFAULT NULL COMMENT '推广链接',
+  `balance` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '账户余额',
+  `h1_balance` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT 'h1余额',
+  `status` tinyint(1) DEFAULT '0' COMMENT '0启用 1禁用',
+  `del_flag` tinyint(1) DEFAULT '0' COMMENT '0 正常 1删除',
+  `wx_code` varchar(25) DEFAULT NULL COMMENT '微信号码',
+  `alipay_code` varchar(25) DEFAULT NULL COMMENT '支付宝号码',
+  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='寰朋用户表'
+
+=============sql数据插入================
+用户15353535353  密码 94c07536b9157859a6feb574565b643f 盐值A1C286
+

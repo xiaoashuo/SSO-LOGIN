@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录</title>
+</head>
+<body>
+  <th:block th:if="${hpUser!=null}">
+      欢迎回来 [[${hpUser.username}]]
+  </th:block>
+  <th:block th:if="${hpUser==null}">
+      <div>用户登录</div>
+      <div  th:text="${message}"></div>
+      <form action="/login" method="post">
+          <input type="hidden" name="url" th:value="${url}">
+          <table>
+              <tr>
+                  <td>用户名</td>
+                  <td><input type="text" name="loginCode"></td>
+              </tr>
+              <tr>
+                  <td>密码</td>
+                  <td><input type="text" name="password"></td>
+              </tr>
+              <tr>
+                  <td> <input type="submit" name="btnLogin" value="登录"></td>
+                  <td><input type="reset" name="btnReset" value="重置"></td>
+              </tr>
+
+
+          </table>
+      </form>
+  </th:block>
+
+
+
+</body>
+</html>

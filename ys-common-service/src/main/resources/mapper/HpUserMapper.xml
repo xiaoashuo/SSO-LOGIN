@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lovecyy.sso.common.mapper.HpUserMapper">
+  <resultMap id="BaseResultMap" type="com.lovecyy.sso.common.dto.HpUser">
+    <!--@mbg.generated generated on Tue Sep 10 11:42:30 CST 2019.-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="mobile_no" jdbcType="VARCHAR" property="mobileNo" />
+    <result column="gender" jdbcType="BOOLEAN" property="gender" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="headimg" jdbcType="VARCHAR" property="headimg" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="referer_code" jdbcType="VARCHAR" property="refererCode" />
+    <result column="referer_url" jdbcType="VARCHAR" property="refererUrl" />
+    <result column="balance" jdbcType="DECIMAL" property="balance" />
+    <result column="h1_balance" jdbcType="DECIMAL" property="h1Balance" />
+    <result column="status" jdbcType="BOOLEAN" property="status" />
+    <result column="del_flag" jdbcType="BOOLEAN" property="delFlag" />
+    <result column="wx_code" jdbcType="VARCHAR" property="wxCode" />
+    <result column="alipay_code" jdbcType="VARCHAR" property="alipayCode" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Tue Sep 10 11:42:30 CST 2019.-->
+    id, username, realname, mobile_no, gender, `password`, headimg, id_card, salt, referer_code, 
+    referer_url, balance, h1_balance, `status`, del_flag, wx_code, alipay_code, create_time, 
+    update_time
+  </sql>
+</mapper>

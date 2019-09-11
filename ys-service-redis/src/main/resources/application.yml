@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: ys-sso-service-redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # 密码 没有则可以不填
+    password:
+    timeout: 3000 #超时时间
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+
+#    sentinel:
+#      master: mymaster
+#      nodes: 192.168.75.140:26379
+
+server:
+  port: 8502
+
+
